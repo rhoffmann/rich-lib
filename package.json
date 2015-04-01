@@ -1,0 +1,11 @@
+{
+    "name": "rich-lib",
+    "version": "0.0.1",
+    "description": "npm module for rich utilities library",
+    "preferGlobal": "true",
+    "main": "index.js",
+    "author": "Richard Hoffmann",
+    "keywords": ["rich", "utilities"],
+    "dependencies": {
+    }
+}
