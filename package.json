@@ -1,11 +1,17 @@
 {
+    "author": "Richard Hoffmann",
     "name": "rich-lib",
     "version": "0.0.1",
     "description": "npm module for rich utilities library",
-    "preferGlobal": "true",
+    "preferGlobal": "false",
+    "repository": {
+    	"url": "git@github.com:rhoffmann/rich-lib.git"
+  	},
     "main": "index.js",
-    "author": "Richard Hoffmann",
     "keywords": ["rich", "utilities"],
     "dependencies": {
+    },
+    "engines": {
+    	"node": "*"
     }
 }
