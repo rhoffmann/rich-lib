@@ -59,7 +59,7 @@ lib.mean = function(collection, property) {
 	if (property) {
 		collection = lib.pluck(collection, property);
 	}
-	return reduce(collection, add, 0) / collection.length;
+	return lib.reduce(collection, add, 0) / collection.length;
 };
 
 
