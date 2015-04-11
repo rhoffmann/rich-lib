@@ -13,7 +13,7 @@ rl.filter = function (collection, callback) {
 
 rl.makeFilter = function(collection, property) {
   return function(value) {
-    return filter(collection, function(item) {
+    return rl.filter(collection, function(item) {
       return item[property] === value;
     });
   };

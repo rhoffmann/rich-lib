@@ -1,17 +1,22 @@
 {
-    "author": "Richard Hoffmann",
-    "name": "rich-lib",
-    "version": "0.0.2",
-    "description": "npm module for rich utilities library",
-    "preferGlobal": "false",
-    "repository": {
-    	"url": "git@github.com:rhoffmann/rich-lib.git"
-  	},
-    "main": "index.js",
-    "keywords": ["rich", "utilities"],
-    "dependencies": {
-    },
-    "engines": {
-    	"node": "*"
-    }
+  "author": "Richard Hoffmann",
+  "name": "rich-lib",
+  "version": "0.0.3",
+  "description": "npm module for rich utilities library",
+  "preferGlobal": "false",
+  "repository": {
+    "url": "git@github.com:rhoffmann/rich-lib.git"
+  },
+  "main": "index.js",
+  "keywords": [
+    "rich",
+    "utilities"
+  ],
+  "dependencies": {},
+  "engines": {
+    "node": "*"
+  },
+  "devDependencies": {
+    "vinyl-buffer": "^1.0.0"
+  }
 }
