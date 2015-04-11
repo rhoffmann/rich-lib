@@ -1,4 +1,5 @@
-exports.filter = function filter (collection, callback) {
+
+function filter (collection, callback) {
   var filtered = [];
   var i;
   for (i=0; i<collection.length; i++) {
@@ -9,7 +10,10 @@ exports.filter = function filter (collection, callback) {
   return filtered;
 };
 
-exports.makeFilter = function makeFilter(collection, property) {
+exports.filter = filter;
+
+
+function makeFilter(collection, property) {
   return function(value) {
     return filter(collection, function(item) {
       return item[property] === value;
@@ -17,8 +21,10 @@ exports.makeFilter = function makeFilter(collection, property) {
   };
 };
 
+exports.makeFilter = makeFilter;
 
-exports.map = function map (collection, callback) {
+
+function map (collection, callback) {
   var mapped = [];
   var i;
   for (i=0; i<collection.length; i++) {
@@ -27,7 +33,11 @@ exports.map = function map (collection, callback) {
   return mapped;
 };
 
-exports.reduce = function reduce (collection, callback, initial) {
+exports.map = map;
+
+
+
+function reduce (collection, callback, initial) {
   var last = initial;
   var i;
   for (i = collection.length - 1; i >= 0; i--) {
@@ -36,7 +46,11 @@ exports.reduce = function reduce (collection, callback, initial) {
   return last;
 };
 
-exports.groupBy = function groupBy (collection, callback) {
+exports.reduce = reduce;
+
+
+
+function groupBy (collection, callback) {
   var grouped = {};
   var groupName;
 
@@ -53,8 +67,11 @@ exports.groupBy = function groupBy (collection, callback) {
   return grouped;
 };
 
+exports.groupBy = groupBy;
 
-exports.mean = function mean(collection, property) {
+
+
+function mean(collection, property) {
 	if (property) {
 		collection = map(collection, function(item) {
 			return item[property];
@@ -63,7 +80,12 @@ exports.mean = function mean(collection, property) {
 	return reduce(collection, add, 0) / collection.length;
 };
 
+exports.mean = mean;
 
-exports.add = function add(a, b) {
+
+
+function add(a, b) {
 	return a + b;
 };
+
+exports.add = add;
